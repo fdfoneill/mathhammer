@@ -1,0 +1,22 @@
+# .gitignore
+__pycache__
+python-virtual-environments
+venv
+temp/*
+*/temp/*
+/src
+
+# distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg_info/
+.installed.cfg
+*.egg
