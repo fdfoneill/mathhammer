@@ -6,7 +6,10 @@ class Die:
 	def __init__(self,sides):
 		self.sides = sides
 
-	def roll(self, modifier = 0, reroll=None, bestof = None, *args, **kwargs) -> int:
+	def __repr__(self):
+		return f"Instance of {self.sides}-sided die"
+
+	def roll(self, modifier:int = 0, reroll:list=None, bestof:int = None, *args, **kwargs) -> int:
 		"""Method to roll the die
 
 		Parameters
@@ -16,7 +19,7 @@ class Die:
 		reroll: list
 			List of integer results on which the die should be re-rolled.
 		bestof: int
-			Roll the die multiple times, return only the highest.
+			Roll the die multiple times, return only the highest result.
 
 		Returns
 		-------
@@ -52,3 +55,16 @@ class D3(Die):
 
 	def __init__(self):
 		super().__init__(sides=3)
+
+
+class DConst(Die):
+	"""A class to put Die methods on constants"""
+
+	def __init__(self,value=1):
+		super().__init__(sides=value)
+
+	def __repr__(self):
+		return f"Instance of DConst with value {self.sides}"
+
+	def roll(self,*args,**kwargs):
+		return self.sides
