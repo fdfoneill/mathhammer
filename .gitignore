@@ -5,6 +5,7 @@ venv
 temp/*
 */temp/*
 /src
+.DS_Store
 
 # distribution / packaging
 bin/
