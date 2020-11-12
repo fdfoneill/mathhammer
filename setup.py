@@ -1,7 +1,7 @@
 #!/usr/bin/env/ python
 
 import pathlib
-from setuptools import setuptools
+from setuptools import setup
 
 # the directory containing this file
 HERE = pathlib.Path(__file__).parent
@@ -21,7 +21,7 @@ setup(name='mathhammer',
 	author="F. Dan O'Neill",
 	author_email="fdfoneill@gmail.com",
 	license='MIT',
-	packages='mathhammer',
+	packages=['mathhammer'],
 	include_package_data=True,
 	#third-party dependencies
 	install_requires=[
